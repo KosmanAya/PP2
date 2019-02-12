@@ -11,7 +11,7 @@ namespace task4
     {
         static void Main(string[] args)
         {
-            StreamWriter sw = new StreamWriter(@"C: \Users\User\Desktop\test.txt");
+            StreamWriter sw = new StreamWriter(@"C: \Users\User\Desktop\test.txt"); // даем сами знанчение и создает сам
             sw.Write(34564);
             sw.Close();
 

@@ -10,12 +10,12 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            string line1 = Console.ReadLine();
-            int n = int.Parse(line1);
+            string line1 = Console.ReadLine(); // вызываем строку 
+            int n = int.Parse(line1); // cтрока=цифрам
             int[] nums_int = new int[n];
-            string line2 = Console.ReadLine();
-            string[] nums_string = line2.Split(); 
-            for(int i=0; i<n; ++i)
+            string line2 = Console.ReadLine(); // читает вторую строку
+            string[] nums_string = line2.Split();  //  разбивает строки на подсроки 
+            for(int i=0; i<n; ++i) 
             {
                 nums_int[i] = int.Parse(nums_string[i]);
             }
@@ -27,9 +27,9 @@ namespace Task1
             for(int i = 0; i < n; ++i)
             {
                 int nums_now = nums_int[i];
-                if (nums_now == 0 || nums_now == 1) continue;
+                if (nums_now == 0 || nums_now == 1) continue; 
                 bool isgood = true;
-                for(int g = 2; g < nums_now; ++g)
+                for(int g = 2; g < nums_now; ++g) //начинаем с двойки
                 {
                     if (nums_now % g == 0) isgood = false;
                 }
