@@ -11,7 +11,9 @@ namespace task3
     {
         static void print(DirectoryInfo d, int cursor)// будет хранить информацию про папки и курсор
         {
-            Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Black;
+
+           Console.Clear();
             FileSystemInfo[] fsis = d.GetFileSystemInfos();// cоздаем массив и даем ему значение файлов и документов
             for (int i = 0; i < fsis.Length; i++) // проходим по массиву
             {
@@ -26,7 +28,7 @@ namespace task3
                 }
                 if (i == cursor)  //цвет шрифта где стоит курсор серый 
                 {
-                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.BackgroundColor = ConsoleColor.Gray;
                 }
                 else
                 {
